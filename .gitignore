@@ -1,0 +1,36 @@
+#built application files
+*.apk
+
+# files for the dex VM
+*.dex
+
+# Java class files
+*.class
+
+# generated files
+bin/
+gen/
+
+# Local configuration file (sdk pathName, etc)
+/local.properties
+
+# Windows thumbnail db
+Thumbs.db
+
+# OSX files
+.DS_Store
+
+# Eclipse project files
+.classpath
+.project
+
+# Android Studio
+.idea/
+.gradle
+build/
+*.iml
+captures/
+.externalNativeBuild
+*.properties
+
+app/src/main/res/values/secret_strings.xml

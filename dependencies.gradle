@@ -1,0 +1,101 @@
+allprojects {
+
+  repositories {
+    jcenter()
+    mavenCentral()
+    maven {
+      url 'https://maven.google.com'
+    }
+    maven {
+      url 'https://oss.sonatype.org/content/repositories/snapshots'
+    }
+    maven { url "https://jitpack.io" }
+  }
+}
+
+ext {
+
+  //Android
+  androidBuildToolsVersion = "26.0.1"
+  androidMinSdkVersion = 16
+  androidTargetSdkVersion = 26
+  androidCompileSdkVersion = 26
+  androidSupportLibVersion = '26.0.1'
+  constraintLayoutVersion = '1.0.2'
+
+  //Utilies
+  phraseVersion = '1.1.0'
+  permisoVersion = '0.3.0'
+  gcmVersion = '11.0.4'
+
+  //Image
+  glideVersion = '4.0.0'
+  glideTransformationsVersion = '2.0.2'
+
+  //Network
+  retrofitVersion = '2.3.0'
+  retrofitRxJava2Version = '2.3.0'
+  okhttpVersion = '3.8.1'
+
+  //RX
+  rxAndroid2Version = '2.0.1'
+  rxJava2Version = '2.1.0'
+  rxBusVersion = '2.0.0'
+
+  //Injections
+  butterKnifeVersion = '8.7.0'
+  kotterKnifeVersion = '0.1.0-SNAPSHOT'
+  daggerVersion = '2.10'
+  javaxAnnotationVersion = '1.0'
+  javaxInjectVersion = '1'
+
+  //Testing
+  jUnitVersion = '4.12'
+  espressoVersion = '2.2.2'
+  timberVersion = '4.5.1'
+
+  //UI
+  shimmerRecylcerViewVersion = 'v1.1'
+  viewPagerIndicatorVersion = '2.4.1.1'
+
+  dataDependencies = [retrofit                : "com.squareup.retrofit2:retrofit:${retrofitVersion}",
+                      retrofitrxjava2adapter  : "com.squareup.retrofit2:adapter-rxjava2:${retrofitVersion}",
+                      retorfitgsonadapter     : "com.squareup.retrofit2:converter-gson:${retrofitVersion}",
+                      okhttp                  : "com.squareup.okhttp3:okhttp:${okhttpVersion}",
+                      okhttpLoggingInterceptor: "com.squareup.okhttp3:logging-interceptor:${okhttpVersion}",
+                      rxjava2                 : "io.reactivex.rxjava2:rxjava:${rxJava2Version}",
+                      rxandroid2              : "io.reactivex.rxjava2:rxandroid:${rxAndroid2Version}",
+                      javaxAnnotation         : "javax.annotation:jsr250-api:${javaxAnnotationVersion}",
+                      javaxInject             : "javax.inject:javax.inject:${javaxInjectVersion}",
+                      junit                   : "junit:junit:${jUnitVersion}"]
+
+  domainDependencies = [rxjava2        : "io.reactivex.rxjava2:rxjava:${rxJava2Version}",
+                        javaxAnnotation: "javax.annotation:jsr250-api:${javaxAnnotationVersion}",
+                        javaxInject    : "javax.inject:javax.inject:${javaxInjectVersion}",
+                        junit          : "junit:junit:${jUnitVersion}"]
+
+  appDependencies = [supportv7             : "com.android.support:appcompat-v7:${androidSupportLibVersion}",
+                     supportDesign         : "com.android.support:design:${androidSupportLibVersion}",
+                     gridLayout            : "com.android.support:gridlayout-v7:${androidSupportLibVersion}",
+                     cardView              : "com.android.support:cardview-v7:${androidSupportLibVersion}",
+                     percent               : "com.android.support:percent:${androidSupportLibVersion}",
+                     constraintLayout      : "com.android.support.constraint:constraint-layout:${constraintLayoutVersion}",
+                     rxjava2               : "io.reactivex.rxjava2:rxjava:${rxJava2Version}",
+                     rxandroid2            : "io.reactivex.rxjava2:rxandroid:${rxAndroid2Version}",
+                     rxBus                 : "com.hwangjr.rxbus:rxbus:${rxBusVersion}",
+                     kotterKnife           : "com.jakewharton:kotterknife:${kotterKnifeVersion}",
+                     dagger                : "com.google.dagger:dagger-android:${daggerVersion}",
+                     daggerSupport         : "com.google.dagger:dagger-android-support:${daggerVersion}",
+                     daggerCompiler        : "com.google.dagger:dagger-compiler:${daggerVersion}",
+                     daggerAndroidProcessor: "com.google.dagger:dagger-android-processor:${daggerVersion}",
+                     junit                 : "junit:junit:${jUnitVersion}",
+                     timber                : "com.jakewharton.timber:timber:${timberVersion}",
+                     phrase                : "com.squareup.phrase:phrase:${phraseVersion}",
+                     glide                 : "com.github.bumptech.glide:glide:${glideVersion}",
+                     glideCompiler         : "com.github.bumptech.glide:compiler:${glideVersion}",
+                     glideTransformation   : "jp.wasabeef:glide-transformations:${glideTransformationsVersion}",
+                     shimmerRecyclerView   : "com.github.sharish:ShimmerRecyclerView:${shimmerRecylcerViewVersion}",
+                     viewPagerIndicator    : "fr.avianey.com.viewpagerindicator:library:${viewPagerIndicatorVersion}@aar",
+                     permiso               : "com.greysonparrelli.permiso:permiso:${permisoVersion}",
+                     gcm                   : "com.google.android.gms:play-services-gcm:${gcmVersion}"]
+}

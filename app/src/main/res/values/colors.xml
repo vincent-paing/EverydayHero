@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+  <color name="primary">#673AB7</color>
+  <color name="primary_dark">#512DA8</color>
+  <color name="primary_light">#D1C4E9</color>
+  <color name="accent">#FF5252</color>
+
+  <color name="primary_text">#212121</color>
+  <color name="primary_text_white">#ffffff</color>
+  <color name="secondary_text">#757575</color>
+  <color name="icons">#FFFFFF</color>
+  <color name="divider">#BDBDBD</color>
+  <color name="darker_gray">#AAAAAA</color>
+
+  <color name="transparent_black">#C0000000</color>
+
+
+  <color name="amber">#FEC007</color>
+  <color name="las_palmas">#CCDB39</color>
+  <color name="fruit_salad">#4CAF50</color>
+  <color name="gallery">#F0F0F0</color>
+
+  <color name="black_haze">#F6F7F8</color>
+</resources>

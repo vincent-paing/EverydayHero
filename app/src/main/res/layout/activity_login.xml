@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:animateLayoutChanges="true"
+    android:background="@android:color/white"
+    android:orientation="vertical"
+    >
+
+  <FrameLayout
+      android:layout_width="match_parent"
+      android:layout_height="match_parent"
+      android:animateLayoutChanges="true"
+      >
+
+    <RelativeLayout
+        android:id="@+id/layout_default"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        >
+
+      <TextView
+          android:id="@+id/btn_login"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:layout_alignParentBottom="true"
+          android:background="@color/primary"
+          android:clickable="true"
+          android:fontFamily="sans-serif-medium"
+          android:gravity="center"
+          android:padding="@dimen/dimen_medium"
+          android:text="@string/txt_login"
+          android:textColor="@color/primary_text_white"
+          android:textSize="@dimen/material_text_title"
+          />
+
+      <TextView
+          android:id="@+id/btn_terms"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:layout_above="@id/btn_login"
+          android:foreground="?attr/selectableItemBackground"
+          android:gravity="center"
+          android:padding="@dimen/dimen_small"
+          android:text="@string/txt_terms"
+          android:textColor="@color/primary"
+          android:textSize="@dimen/material_text_body1"
+          />
+
+      <com.viewpagerindicator.CirclePageIndicator
+          android:id="@+id/vp_indicator"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:layout_above="@+id/btn_terms"
+          android:layout_marginBottom="@dimen/dimen_medium"
+          android:padding="@dimen/dimen_small"
+          />
+
+      <android.support.v4.view.ViewPager
+          android:id="@+id/view_pager_onboarding"
+          android:layout_width="match_parent"
+          android:layout_height="match_parent"
+          android:layout_above="@id/vp_indicator"
+          />
+
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/layout_loading"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone"
+        >
+
+      <ProgressBar
+          android:id="@+id/progress_bar"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_centerInParent="true"
+          />
+
+      <TextView
+          android:id="@+id/tv_loading_title"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_below="@id/progress_bar"
+          android:layout_centerHorizontal="true"
+          android:layout_marginTop="@dimen/dimen_small"
+          android:text="@string/txt_logging_in"
+          android:textColor="@color/primary_text_white"
+          android:textSize="@dimen/material_text_title"
+          />
+
+
+    </RelativeLayout>
+
+  </FrameLayout>
+
+
+</LinearLayout>

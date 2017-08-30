@@ -1,0 +1,124 @@
+apply plugin: 'com.android.application'
+apply plugin: 'kotlin-android'
+apply plugin: 'kotlin-kapt'
+apply plugin: 'kotlin-android-extensions'
+
+android {
+
+  sourceSets {
+    main.java.srcDirs += 'src/main/kotlin'
+  }
+
+  def globalConfiguration = rootProject.extensions.getByName("ext")
+
+  compileSdkVersion globalConfiguration["androidCompileSdkVersion"]
+  buildToolsVersion globalConfiguration["androidBuildToolsVersion"]
+
+  defaultConfig {
+    applicationId globalConfiguration["androidApplicationId"]
+    minSdkVersion globalConfiguration["androidMinSdkVersion"]
+    targetSdkVersion globalConfiguration["androidTargetSdkVersion"]
+    versionCode globalConfiguration["androidVersionCode"]
+    versionName globalConfiguration["androidVersionName"]
+    testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+    resConfig "en"
+    vectorDrawables.useSupportLibrary true
+  }
+
+  packagingOptions {
+    exclude 'LICENSE.txt'
+    exclude 'META-INF/DEPENDENCIES'
+    exclude 'META-INF/ASL2.0'
+    exclude 'META-INF/NOTICE'
+    exclude 'META-INF/LICENSE'
+  }
+
+  lintOptions {
+    quiet true
+    abortOnError false
+    ignoreWarnings true
+  }
+
+  signingConfigs {
+    release {
+      storeFile file("everydayhero_release.jks")
+      storePassword "release"
+      keyAlias "Release"
+      keyPassword "release"
+      v2SigningEnabled true
+    }
+  }
+
+  buildTypes {
+
+    debug {
+      debuggable true
+      ext.enableCrashlytics = false
+    }
+
+    release {
+      signingConfig signingConfigs.release
+      debuggable true
+      minifyEnabled true
+      shrinkResources true
+      zipAlignEnabled true
+      proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+    }
+  }
+}
+
+kapt {
+  generateStubs = true
+}
+
+dependencies {
+  compile fileTree(dir: 'libs', include: ['*.jar'])
+  compile project(':domain')
+  compile project(':data')
+
+  def appDependencies = rootProject.ext.appDependencies
+
+  androidTestCompile('com.android.support.test.espresso:espresso-core:2.2.2', {
+    exclude group: 'com.android.support', module: 'support-annotations'
+    exclude group: 'com.google.code.findbugs'
+  })
+
+  testCompile appDependencies.junit
+
+  compile appDependencies.supportv7
+  compile appDependencies.supportDesign
+  compile appDependencies.gridLayout
+  compile appDependencies.cardView
+  compile appDependencies.percent
+
+
+  compile appDependencies.phrase
+
+  compile appDependencies.glide
+  kapt appDependencies.glideCompiler
+  compile appDependencies.glideTransformation
+
+  compile appDependencies.rxjava2
+  compile appDependencies.rxandroid2
+  compile appDependencies.rxBus
+
+  compile appDependencies.kotterKnife
+  compile appDependencies.dagger
+  compile appDependencies.daggerSupport
+
+  compile 'com.facebook.android:account-kit-sdk:4.25.0'
+
+  kapt appDependencies.daggerCompiler
+  kapt appDependencies.daggerAndroidProcessor
+
+  compile appDependencies.timber
+
+  compile appDependencies.shimmerRecyclerView
+  compile appDependencies.viewPagerIndicator
+  compile appDependencies.permiso
+
+  compile "org.jetbrains.kotlin:kotlin-stdlib-jre7:$kotlin_version"
+}
+repositories {
+  mavenCentral()
+}

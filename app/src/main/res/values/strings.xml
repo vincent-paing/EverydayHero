@@ -1,0 +1,46 @@
+<resources>
+  <string name="app_name">Everyday Hero</string>
+
+  <string name="error_generic">Unknown Error</string>
+  <string name="error_no_connection">Requires Internet Connection</string>
+  <string name="error_socket_timeout">Connection timeout</string>
+  <string name="error_load_quest">Error loading quests, tap to retry</string>
+
+  <string name="hint_phone_no">Phone No</string>
+  <string name="hint_password">Password</string>
+
+  <string name="txt_welcome">Welcome to the land of heroes, tap on Start to get Started</string>
+  <string name="txt_login">S T A R T</string>
+  <string name="txt_terms">By Logging in, you agreed to our Terms &amp; Conditions</string>
+
+  <string name="txt_ask_name">Give a name to your hero! (You can change this later in settings)</string>
+  <string name="txt_logging_in">Logging in… Please Wait</string>
+
+  <string name="format_exp">{exp} XP</string>
+  <string name="format_hero_lvl_and_exp">Lvl.{lvl} {title} | {exp} XP</string>
+  <string name="format_hero_lvl">Lvl.{lvl} {title}</string>
+  <string name="format_coin">{coin} Coins</string>
+  <string name="format_unlock">Unlock at Lvl. {lvl}</string>
+
+  <string name="text_save">Save</string>
+  <string name="txt_daily_reminder">Daily Reminder</string>
+  <string name="text_cancel">Cancel</string>
+
+
+  <string name="menu_title_shop">Shop</string>
+  <string name="menu_title_quest">Quest</string>
+  <string name="menu_title_settings">Settings</string>
+
+  <string name="hint_password_again">Password Again</string>
+  <string name="hint_hero_name">Hero Name</string>
+
+  <string name="onboarding_title_one">Improve your community</string>
+  <string name="onboarding_description_one">You\'ll be assigned new quests everyday. The quests are specially catered to be doable as well as effective in your everyday life.</string>
+
+  <string name="onboarding_title_two">Become more powerful</string>
+  <string name="onboarding_description_two">Finishing quests give you coins as well as increase your hero\'s experience point, and eventually their levels, unlocking new hero portraits</string>
+
+  <string name="onboarding_title_three">Share your hero</string>
+  <string name="onboarding_description_three">Buy cool hero portraits with the coins you\'ve earned, and share it on social medias.</string>
+
+</resources>

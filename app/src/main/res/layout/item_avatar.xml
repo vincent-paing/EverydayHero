@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<me.aungkyawpaing.everydayhero.components.SquareFrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    >
+
+  <me.aungkyawpaing.everydayhero.components.SquareImageView
+      android:id="@+id/iv_avatar"
+      android:layout_width="match_parent"
+      android:layout_height="match_parent"
+      android:src="@drawable/ic_square_placeholder"
+      />
+
+  <RelativeLayout
+      android:id="@+id/layout_locked"
+      android:layout_width="match_parent"
+      android:layout_height="match_parent"
+      android:background="@color/transparent_black"
+      />
+
+  <TextView
+      android:id="@+id/tv_locked"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_centerInParent="true"
+      android:layout_gravity="center"
+      android:textColor="@color/primary_text_white"
+      android:textSize="@dimen/material_text_title"
+      tools:text="Unlock at Lvl. 5"
+      />
+
+  <ImageView
+      android:id="@+id/iv_checked"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_gravity="end|bottom"
+      android:visibility="gone"
+      app:srcCompat="@drawable/ic_check_green_24dp"
+      />
+
+</me.aungkyawpaing.everydayhero.components.SquareFrameLayout>

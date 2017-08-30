@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    >
+
+  <android.support.design.widget.AppBarLayout
+      android:layout_width="match_parent"
+      android:layout_height="96dp"
+      android:fillViewport="true"
+      >
+
+    <android.support.design.widget.CollapsingToolbarLayout
+        android:id="@+id/collpasing_toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true"
+        app:collapsedTitleGravity="right"
+        app:expandedTitleGravity="center"
+        app:layout_scrollFlags="scroll|exitUntilCollapsed"
+        app:title="500 Points"
+        >
+
+      <android.support.v7.widget.Toolbar
+          android:layout_width="wrap_content"
+          android:layout_height="?attr/actionBarSize"
+          android:layout_marginRight="@dimen/dimen_medium"
+          android:fillViewport="true"
+          app:layout_collapseMode="pin"
+          />
+
+    </android.support.design.widget.CollapsingToolbarLayout>
+
+  </android.support.design.widget.AppBarLayout>
+
+  <com.cooltechworks.views.shimmer.ShimmerRecyclerView
+      android:id="@+id/rv_avatar_packs"
+      android:layout_width="match_parent"
+      android:layout_height="match_parent"
+      app:layout_behavior="@string/appbar_scrolling_view_behavior"
+      app:shimmer_demo_angle="20"
+      app:shimmer_demo_child_count="4"
+      app:shimmer_demo_grid_child_count="2"
+      app:shimmer_demo_layout="@layout/item_demo_avatar_pack"
+      app:shimmer_demo_layout_manager_type="grid"
+      app:shimmer_demo_shimmer_color="#73ffffff"
+      app:shimmer_demo_view_holder_item_background="@android:color/white"
+      app:spanCount="2"
+      tools:listitem="@layout/item_avatar_pack"
+      />
+
+</android.support.design.widget.CoordinatorLayout>

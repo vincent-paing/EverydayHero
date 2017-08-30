@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    >
+
+  <android.support.v7.widget.Toolbar
+      android:id="@+id/toolbar"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:background="?attr/colorPrimary"
+      android:clickable="false"
+      app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
+      app:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+      >
+
+    <LinearLayout
+        android:id="@+id/layout_hero_info"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="?attr/selectableItemBackground"
+        android:clickable="true"
+        android:orientation="horizontal"
+        android:padding="@dimen/dimen_small"
+        >
+
+      <ImageView
+          android:id="@+id/iv_hero"
+          android:layout_width="64dp"
+          android:layout_height="64dp"
+          android:src="@drawable/ic_cricle_placeholder"
+          />
+
+      <LinearLayout
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:layout_gravity="center"
+          android:orientation="vertical"
+          >
+
+        <TextView
+            android:id="@+id/tv_hero_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/dimen_small"
+            android:layout_marginStart="@dimen/dimen_small"
+            android:fontFamily="sans-serif-medium"
+            android:maxLines="1"
+            android:textColor="@color/primary_text_white"
+            android:textSize="@dimen/material_text_title"
+            tools:text="TheLegend27"
+            />
+
+        <TextView
+            android:id="@+id/tv_hero_lvl_exp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/dimen_small"
+            android:layout_marginStart="@dimen/dimen_small"
+            android:fontFamily="serif-monospace"
+            android:maxLines="1"
+            android:textColor="@color/primary_text_white"
+            android:textSize="@dimen/material_text_subhead"
+            tools:text="Lv.5 Squaddie"
+            />
+
+        <ProgressBar
+            android:id="@+id/progress_bar_hero_exp"
+            android:layout_width="196dp"
+            android:layout_height="8dp"
+            android:layout_marginLeft="@dimen/dimen_small"
+            android:layout_marginStart="@dimen/dimen_small"
+            android:layout_marginTop="@dimen/dimen_small"
+            android:progressDrawable="@drawable/progress_accent_white_bg"
+            tools:max="100"
+            tools:progress="50"
+            tools:text="TheLegend27"
+            style="?android:attr/progressBarStyleHorizontal"
+            />
+
+      </LinearLayout>
+
+    </LinearLayout>
+
+  </android.support.v7.widget.Toolbar>
+
+  <RelativeLayout
+      android:id="@+id/layout_content"
+      android:layout_width="match_parent"
+      android:layout_height="match_parent"
+      android:background="@color/gallery"
+      android:padding="@dimen/dimen_medium"
+      >
+
+    <android.support.v7.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@android:color/white"
+        app:cardBackgroundColor="@color/cardview_light_background"
+        app:cardCornerRadius="@dimen/dimen_small"
+        >
+
+      <LinearLayout
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:background="@drawable/cardview_black_border"
+          android:orientation="vertical"
+          android:paddingLeft="@dimen/dimen_small"
+          android:paddingRight="@dimen/dimen_small"
+          >
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dimen_small"
+            android:text="Daily Quests"
+            android:textColor="@color/primary_text"
+            android:textSize="@dimen/material_text_title"
+            />
+
+
+        <me.aungkyawpaing.everydayhero.components.NotScrollableShimmerRecyclerView
+            android:id="@+id/rv_quests"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            app:shimmer_demo_angle="20"
+            app:shimmer_demo_child_count="3"
+            app:shimmer_demo_layout="@layout/item_demo_quest"
+            app:shimmer_demo_layout_manager_type="linear_vertical"
+            app:shimmer_demo_shimmer_color="#73ffffff"
+            app:shimmer_demo_view_holder_item_background="@android:color/white"
+            tools:listitem="@layout/item_quest"
+            />
+
+        <RelativeLayout
+            android:id="@+id/layout_error"
+            android:layout_width="match_parent"
+            android:layout_height="216dp"
+            android:background="?attr/selectableItemBackground"
+            android:clickable="true"
+            android:visibility="gone"
+            >
+
+          <TextView
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:layout_centerInParent="true"
+              android:text="@string/error_load_quest"
+              android:textColor="@color/primary_text"
+              android:textSize="@dimen/material_text_subhead"
+              />
+
+        </RelativeLayout>
+
+      </LinearLayout>
+
+    </android.support.v7.widget.CardView>
+
+
+  </RelativeLayout>
+
+</LinearLayout>

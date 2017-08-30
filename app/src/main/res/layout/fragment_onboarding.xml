@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.percent.PercentRelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="@dimen/dimen_medium"
+    >
+
+  <ImageView
+      android:id="@+id/iv_onboarding_image"
+      android:layout_width="match_parent"
+      android:layout_centerHorizontal="true"
+      android:layout_marginTop="@dimen/dimen_small"
+      android:gravity="center"
+      android:textColor="@color/secondary_text"
+      android:textSize="@dimen/material_text_subhead"
+      app:layout_heightPercent="50%"
+      tools:src="@drawable/screen1"
+      />
+
+  <TextView
+      android:id="@+id/tv_onboarding_title"
+      android:layout_width="match_parent"
+      android:layout_below="@id/iv_onboarding_image"
+      android:layout_marginTop="@dimen/dimen_small"
+      android:fontFamily="sans-serif-medium"
+      android:gravity="center"
+      android:textColor="@color/primary_text"
+      android:textSize="@dimen/material_text_title"
+      app:layout_heightPercent="15%"
+      tools:text="@string/onboarding_title_one"
+      />
+
+  <TextView
+      android:id="@+id/tv_onboarding_description"
+      android:layout_width="match_parent"
+      android:layout_below="@id/tv_onboarding_title"
+      android:layout_marginTop="@dimen/dimen_small"
+      android:gravity="center"
+      android:textColor="@color/secondary_text"
+      android:textSize="@dimen/material_text_subhead"
+      app:layout_heightPercent="35%"
+      tools:text="@string/onboarding_description_one"
+      />
+
+
+</android.support.percent.PercentRelativeLayout>

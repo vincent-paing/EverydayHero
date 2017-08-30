@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:animateLayoutChanges="true"
+    android:background="@color/primary_dark"
+    android:orientation="vertical"
+    >
+
+  <FrameLayout
+      android:layout_width="match_parent"
+      android:layout_height="match_parent"
+      >
+
+    <RelativeLayout
+        android:id="@+id/layout_default"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        >
+
+
+      <TextView
+          android:id="@+id/tv_welcome"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:layout_marginLeft="@dimen/dimen_medium"
+          android:layout_marginRight="@dimen/dimen_medium"
+          android:layout_marginTop="@dimen/dimen_xlarge"
+          android:fontFamily="sans-serif-thin"
+          android:gravity="center"
+          android:maxLines="1"
+          android:text="@string/txt_ask_name"
+          android:textColor="@color/primary_text_white"
+          android:textSize="@dimen/material_text_title"
+          />
+
+
+      <EditText
+          android:id="@+id/et_name"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:layout_centerInParent="true"
+          android:layout_marginLeft="@dimen/dimen_medium"
+          android:layout_marginRight="@dimen/dimen_medium"
+          android:background="@drawable/bg_et"
+          android:foreground="?attr/selectableItemBackground"
+          android:gravity="center"
+          android:hint="Hero Name"
+          android:inputType="text"
+          android:maxLines="1"
+          android:padding="@dimen/dimen_medium"
+          android:textColor="@color/primary_text_white"
+          android:textColorHint="@color/divider"
+          android:textSize="@dimen/material_text_title"
+          />
+
+
+      <TextView
+          android:id="@+id/btn_go"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:layout_alignParentBottom="true"
+          android:background="@color/amber"
+          android:foreground="?attr/selectableItemBackground"
+          android:gravity="center"
+          android:padding="@dimen/dimen_medium"
+          android:text="Go"
+          android:textColor="@color/primary_text"
+          android:textSize="@dimen/material_text_title"
+          />
+
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/layout_loading"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone"
+        >
+
+      <ProgressBar
+          android:id="@+id/progress_bar"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_centerInParent="true"
+          />
+
+      <TextView
+          android:id="@+id/tv_loading_title"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_below="@id/progress_bar"
+          android:layout_centerHorizontal="true"
+          android:layout_marginTop="@dimen/dimen_small"
+          android:text="@string/txt_logging_in"
+          android:textColor="@color/primary_text_white"
+          android:textSize="@dimen/material_text_title"
+          />
+
+
+    </RelativeLayout>
+
+  </FrameLayout>
+
+
+</LinearLayout>

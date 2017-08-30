@@ -1,0 +1,347 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    >
+
+  <android.support.v7.widget.Toolbar
+      android:id="@+id/toolbar"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:background="?attr/colorPrimary"
+      android:clickable="false"
+      app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
+      app:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+      />
+
+  <android.support.v4.widget.NestedScrollView
+      android:layout_width="match_parent"
+      android:layout_height="match_parent"
+      >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingTop="@dimen/dimen_medium"
+        >
+
+      <android.support.v7.widget.CardView
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:layout_marginBottom="@dimen/dimen_medium"
+          app:cardBackgroundColor="@android:color/white"
+          >
+
+        <LinearLayout
+            android:id="@+id/layout_hero_info"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:padding="@dimen/dimen_small"
+            >
+
+          <FrameLayout
+              android:id="@+id/layout_edit_avatar"
+              android:layout_width="64dp"
+              android:clickable="true"
+              android:layout_height="64dp"
+              >
+
+            <ImageView
+                android:id="@+id/iv_hero"
+                android:layout_width="64dp"
+                android:clickable="false"
+                android:layout_height="64dp"
+                android:src="@drawable/ic_cricle_placeholder"
+                />
+
+            <ImageView
+                android:id="@+id/iv_edit"
+                android:clickable="false"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                app:srcCompat="@drawable/ic_edit_black_24dp"
+                />
+
+          </FrameLayout>
+
+          <LinearLayout
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:layout_gravity="center"
+              android:orientation="vertical"
+              >
+
+            <TextView
+                android:id="@+id/tv_hero_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/dimen_small"
+                android:layout_marginStart="@dimen/dimen_small"
+                android:fontFamily="sans-serif-medium"
+                android:maxLines="1"
+                android:textColor="@color/primary_text"
+                android:textSize="@dimen/material_text_title"
+                tools:text="TheLegend27"
+                />
+
+            <TextView
+                android:id="@+id/tv_hero_lvl_exp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/dimen_small"
+                android:layout_marginStart="@dimen/dimen_small"
+                android:fontFamily="serif-monospace"
+                android:maxLines="1"
+                android:textColor="@color/primary_text"
+                android:textSize="@dimen/material_text_subhead"
+                tools:text="Lv.5 Squaddie"
+                />
+
+            <ProgressBar
+                android:id="@+id/progress_bar_hero_exp"
+                android:layout_width="196dp"
+                android:layout_height="8dp"
+                android:layout_marginLeft="@dimen/dimen_small"
+                android:layout_marginStart="@dimen/dimen_small"
+                android:layout_marginTop="@dimen/dimen_small"
+                android:progressDrawable="@drawable/progress_accent_black_stroke"
+                tools:max="100"
+                tools:progress="50"
+                tools:text="TheLegend27"
+                style="?android:attr/progressBarStyleHorizontal"
+                />
+
+          </LinearLayout>
+
+        </LinearLayout>
+
+      </android.support.v7.widget.CardView>
+
+      <android.support.v7.widget.CardView
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:layout_marginBottom="@dimen/dimen_medium"
+          app:cardBackgroundColor="@color/cardview_light_background"
+
+          >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            >
+
+          <TextView
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:layout_marginLeft="@dimen/dimen_medium"
+              android:layout_marginTop="@dimen/dimen_medium"
+              android:text="Settings"
+              android:textColor="@color/primary"
+              android:textSize="@dimen/material_text_caption"
+              android:textStyle="bold"
+              />
+
+          <RelativeLayout
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+
+              android:padding="@dimen/dimen_medium"
+              >
+
+            <Switch
+                android:id="@+id/switch_remidner"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                />
+
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_gravity="center"
+                android:layout_toLeftOf="@id/switch_remidner"
+                android:text="@string/txt_daily_reminder"
+                android:textColor="@color/primary_text"
+                android:textSize="@dimen/material_text_body1"
+                />
+
+          </RelativeLayout>
+
+          <View
+              android:layout_width="match_parent"
+              android:layout_height="1dp"
+              android:background="@color/divider"
+              />
+
+
+          <RelativeLayout
+              android:id="@+id/layout_reminder_time"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:padding="@dimen/dimen_medium"
+              >
+
+            <TextView
+                android:id="@+id/tv_time"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:drawableRight="@drawable/ic_arrow_down_black_24dp"
+                android:gravity="center_vertical"
+                android:text="6 : 00 PM"
+                android:textColor="@color/secondary_text"
+                android:textSize="@dimen/material_text_body1"
+                />
+
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_gravity="center"
+                android:layout_toLeftOf="@id/tv_time"
+                android:text="Reminder Time"
+                android:textColor="@color/primary_text"
+                android:textSize="@dimen/material_text_body1"
+                />
+
+          </RelativeLayout>
+
+          <View
+              android:layout_width="match_parent"
+              android:layout_height="1dp"
+              android:background="@color/divider"
+              />
+
+
+          <RelativeLayout
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:padding="@dimen/dimen_medium"
+              >
+
+            <Switch
+                android:id="@+id/switch_update_avatar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                />
+
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_gravity="center"
+                android:layout_toLeftOf="@id/switch_update_avatar"
+                android:text="Update avatar on level up"
+                android:textColor="@color/primary_text"
+                android:textSize="@dimen/material_text_body1"
+                />
+
+          </RelativeLayout>
+
+        </LinearLayout>
+
+
+      </android.support.v7.widget.CardView>
+
+      <android.support.v7.widget.CardView
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:layout_marginBottom="@dimen/dimen_medium"
+          app:cardBackgroundColor="@color/cardview_light_background"
+          >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            >
+
+          <TextView
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:layout_marginLeft="@dimen/dimen_medium"
+              android:layout_marginTop="@dimen/dimen_medium"
+              android:text="Support"
+              android:textColor="@color/primary"
+              android:textSize="@dimen/material_text_caption"
+              android:textStyle="bold"
+              />
+
+          <TextView
+              android:id="@+id/tv_feedback"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:layout_gravity="center"
+              android:padding="@dimen/dimen_medium"
+              android:text="Send a Feedback"
+              android:textColor="@color/primary_text"
+              android:textSize="@dimen/material_text_body1"
+              />
+
+          <View
+              android:layout_width="match_parent"
+              android:layout_height="1dp"
+              android:background="@color/divider"
+              />
+
+          <TextView
+              android:id="@+id/tv_donate"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:layout_gravity="center"
+              android:padding="@dimen/dimen_medium"
+              android:text="Donate to Developers"
+              android:textColor="@color/primary_text"
+              android:textSize="@dimen/material_text_body1"
+              />
+
+          <View
+              android:layout_width="match_parent"
+              android:layout_height="1dp"
+              android:background="@color/divider"
+              />
+
+        </LinearLayout>
+
+
+      </android.support.v7.widget.CardView>
+
+      <android.support.v7.widget.CardView
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:layout_marginBottom="@dimen/dimen_small"
+          app:cardBackgroundColor="@color/cardview_light_background"
+          >
+
+        <TextView
+            android:id="@+id/tv_sign_out"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:padding="@dimen/dimen_medium"
+            android:text="Log out"
+            android:textColor="@color/accent"
+            android:textSize="@dimen/material_text_body1"
+            />
+
+      </android.support.v7.widget.CardView>
+
+    </LinearLayout>
+
+  </android.support.v4.widget.NestedScrollView>
+</LinearLayout>
