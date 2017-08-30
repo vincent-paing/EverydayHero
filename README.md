@@ -5,9 +5,17 @@ An application that was developed for final year project paper at Computer Studi
 ![Screenshot](http://i.imgur.com/iXTARI4.jpg "Screenshot")
 
 
+### Credit
+Special thanks to my friends for everything they've contributed in making this project a reality
+
+1. **Kaung Sat Linn**
+2. **Phyo Thaw Kaung**
+3. **Khine Zin Thant**
+
+
 ### License
 ```license
 GNU GENERAL PUBLIC LICENSE
 Version 3, 29 June 2007
-Copyright (C) 2017 Aung Kyaw Paing
+Copyright (C) 2017 EverydayHero Team
 ```
